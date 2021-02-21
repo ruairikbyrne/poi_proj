@@ -1,0 +1,26 @@
+{
+  "name": "poi_proj",
+  "version": "1.0.0",
+  "description": "Points of Interest Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruairikbyrne/poi_proj.git"
+  },
+  "author": "Ruairi Byrne",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ruairikbyrne/poi_proj/issues"
+  },
+  "homepage": "https://github.com/ruairikbyrne/poi_proj#readme",
+  "dependencies": {
+    "@hapi/hapi": "^20.1.0",
+    "@hapi/inert": "^6.0.3"
+  },
+  "devDependencies": {
+    "prettier": "^2.2.1"
+  }
+}
