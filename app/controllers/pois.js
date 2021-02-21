@@ -1,17 +1,22 @@
 const POIs = {
-  index: {
+  home: {
     handler: function (request, h) {
-      return h.file("./app/views/main.html");
+      return h.view("home", { title: "Add a place of interest" });
     },
   },
-  signup: {
+  report: {
     handler: function (request, h) {
-      return h.file("./app/views/signup.html");
+      return h.view("report", {
+        title: "Registered locations",
+        locationInfo: this.locationInfo,
+      });
     },
   },
-  login: {
+  addLocation: {
     handler: function (request, h) {
-      return h.file("./app/views/login.html");
+      const data = request.payload;
+      this.locationInfo.push(data);
+      return h.redirect("/report");
     },
   },
 };
