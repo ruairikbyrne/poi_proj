@@ -4,6 +4,7 @@ const Hapi = require("@hapi/hapi");
 const Inert = require("@hapi/inert");
 const Vision = require("@hapi/vision");
 const Cookie = require("@hapi/cookie");
+const Joi = require("@hapi/joi");
 const env = require("dotenv");
 const Handlebars = require("handlebars");
 const ImageStore = require("./app/utils/image-store.js");
@@ -29,7 +30,7 @@ async function init() {
   await server.register(Vision);
   await server.register(Cookie);
   //env.config();
-
+  server.validator(require("@hapi/joi"));
   ImageStore.configure(credentials);
 
   server.views({

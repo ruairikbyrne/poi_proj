@@ -2,6 +2,7 @@
 
 const POIs = require("./app/controllers/pois");
 const Accounts = require("./app/controllers/accounts");
+const Categories = require("./app/controllers/maintenance");
 
 module.exports = [
   { method: "GET", path: "/", config: Accounts.index },
@@ -15,6 +16,8 @@ module.exports = [
   { method: "POST", path: "/settings", config: Accounts.updateSettings },
 
   { method: "GET", path: "/home", config: POIs.home },
+  { method: "GET", path: "/category", config: Categories.index },
+  { method: "POST", path: "/category", config: Categories.addCategory },
   { method: "GET", path: "/report", config: POIs.report },
   { method: "GET", path: "/report/{_id}", config: POIs.deleteLocation },
   { method: "GET", path: "/gallery/{_id}", config: POIs.viewImage },

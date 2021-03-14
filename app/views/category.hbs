@@ -1,0 +1,18 @@
+<div class="uk-flex uk-flex-center uk-flex-middle uk-grid-small" uk-grid>
+    {{> title-card title="Visit Wexford" subTitle="Category Maintenance"}}
+    {{> main-menu }}
+</div>
+
+<div class="uk-child-width-expand uk-flex-center uk-flex-middle uk-grid-small uk-grid-match" uk-grid>
+    <div>
+        {{> category-form }}
+    </div>
+</div>
+{{> error}}
+<div class="uk-container uk-margin">
+    <div class="uk-child-width-expand uk-flex-center uk-flex-middle uk-text-center" uk-grid>
+        <div class="uk-width-expand@m">
+            {{> category-list}}
+        </div>
+    </div>
+</div>

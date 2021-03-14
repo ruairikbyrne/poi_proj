@@ -10,6 +10,10 @@ const locationSchema = new Schema({
   latitude: Number,
   imageurl: String,
   imageid: String,
+  category: {
+    type: Schema.Types.ObjectId,
+    ref: "Category",
+  },
 });
 
 module.exports = Mongoose.model("Location", locationSchema);
