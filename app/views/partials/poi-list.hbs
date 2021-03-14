@@ -8,14 +8,20 @@
         <th>Description</th>
         <th>Longitude</th>
         <th>Latitude</th>
+        <th>Action</th>
         </thead>
         <tbody class="uk-text-left">
-        {{#each locationInfo}}
+        {{#each locations}}
             <tr>
                 <td>{{name}}</td>
                 <td>{{description}}</td>
                 <td>{{longitude}}</td>
                 <td>{{latitude}}</td>
+                <td>
+                    <a href="/gallery/{{_id}}" class="uk-icon-link uk-margin-small-right" uk-icon="image"></a>
+                    <a href="/location/{{_id}}" class="uk-icon-link uk-margin-small-right" uk-icon="file-edit"></a>
+                    <a href="/report/{{_id}}" class="uk-icon-link" uk-icon="trash"></a>
+                </td>
             </tr>
         {{/each}}
         </tbody>

@@ -1,5 +1,5 @@
 <div class="uk-flex uk-flex-center uk-flex-middle uk-grid-small" uk-grid>
-    {{> title-card }}
+    {{> title-card title="Visit Wexford" subTitle="Please log in"}}
     {{> welcome-menu }}
 </div>
 <div class="uk-container uk-margin">
@@ -26,6 +26,7 @@
                     </div>
                     <div class="uk-text-left uk-text-small"></div>
                 </form>
+                {{> error }}
             </div>
         </div>
         <div>
