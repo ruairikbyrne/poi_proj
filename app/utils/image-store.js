@@ -27,6 +27,7 @@ const ImageStore = {
   },
 
   uploadImage: async function (imagefile) {
+    console.log("Imagefile", imagefile);
     await writeFile("./public/temp.img", imagefile);
     const imageDetail = await cloudinary.uploader.upload(
       "./public/temp.img",
@@ -38,6 +39,18 @@ const ImageStore = {
     );
 
     console.log("Image URL: " + imageDetail.public_id);
+    return imageDetail;
+  },
+
+  replaceImage: async function (imagefile) {
+    await writeFile("./public/temp.img", imagefile);
+    const imageDetail = await cloudinary.uploader.upload(
+      "./public/temp.img",
+      function (error, result) {
+        console.log("Replace image ", result, error);
+        return result;
+      }
+    );
     return imageDetail;
   },
 
