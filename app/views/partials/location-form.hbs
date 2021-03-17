@@ -1,5 +1,5 @@
 <div class="uk-margin uk-width-2xlarge uk-margin-auto uk-card uk-card-default uk-card-body uk-box-shadow-large">
-    <form class="uk-form-stacked uk-text-left" action="/location/{{location._id}}" method="POST" >
+    <form class="uk-form-stacked uk-text-left" action="/location/{{location._id}}" method="POST" enctype="multipart/form-data" >
         <div class="uk-grid uk-grid-stack">
             <div class="uk-width-expand@m">
                 <div class="uk-margin">
@@ -14,6 +14,16 @@
                     <div class="uk-form-controls">
                         <input class="uk-input" id="form-stacked-text" type="text" name="description" value="{{location.description}}" />
                     </div>
+                </div>
+
+                <div class="uk-margin">
+                    <label class="uk-form-label" for="form-stacked-text">Category</label>
+                    <select class="uk-select" name="category">
+                        <option>{{location.category.categoryName}}</option>
+                        {{#each categories}}
+                            <option>{{categoryName}}</option>
+                        {{/each}}
+                    </select>
                 </div>
 
                 <div class="uk-margin">
