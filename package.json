@@ -31,6 +31,9 @@
     "joi": "^17.4.0",
     "mongoose": "^5.11.17"
   },
+  "engines": {
+  "node": "v14.15.4"
+  },
   "devDependencies": {
     "prettier": "^2.2.1"
   }
